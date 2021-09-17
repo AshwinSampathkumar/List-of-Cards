@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigator from "./navigator"
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

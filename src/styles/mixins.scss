@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+@mixin align-all($content: $center, $item: $center) {
+  display: $flex;
+  justify-content: $content;
+  align-items: $item;
+}
+
+@mixin col-align($position: $center) {
+  display: $flex;
+  justify-content: $position;
+}
+
+@mixin row-align($position: $center) {
+  display: $flex;
+  align-items: $position;
+}
