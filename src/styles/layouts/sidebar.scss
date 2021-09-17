@@ -1,0 +1,85 @@
+// Layout page
+@import "../global.scss";
+
+.main-container {
+  @extend .full-width;
+  display: $flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  @include row-align();
+  @include col-align($space-between);
+  flex-direction: $column;
+  color: $black;
+  min-width: 15rem;
+  background: $light;
+  padding: 0.5rem 0;
+}
+
+.logo-container {
+  @include col-align();
+  @extend .full-width;
+  border-bottom: 2px $solid $opacity-black-1;
+}
+
+.logo {
+  width: 9rem;
+  height: 4.375rem;
+}
+
+ul {
+  list-style-type: $none;
+  margin: 0;
+}
+
+.sidebar-items {
+  @extend .full-width;
+  flex-direction: $column;
+  padding-left: 0;
+  .sidebar-item {
+    @extend .logo-container;
+    @include row-align();
+    cursor: $pointer;
+    box-shadow: 0 4px 12px 0 $box-shadow-1;
+    .item-content {
+      @include row-align();
+      @extend .logo;
+      cursor: $pointer;
+      text-transform: $capitalize;
+    }
+    &:hover {
+      @extend .bold;
+      background: $linear-gradient-1;
+      color: $light;
+      transition: 0.3s;
+    }
+  }
+  // selected item in navbar
+  .selected-sidebar-item {
+    @extend .bold;
+    background: $linear-gradient-1;
+    color: $light;
+    transition: 0.3s;
+  }
+}
+
+// main container style
+.main-content {
+  flex: 1;
+  background-color: $light-1;
+  box-sizing: $border-box;
+  max-width: calc(100% - 15rem);
+  .container-header {
+    @include row-align();
+    @include col-align(flex-end);
+    @extend .full-width;
+    background: $light-2;
+    padding-top: 0.5rem;
+    height: 4.5rem;
+    box-shadow: 0 4px 0.75rem 0 $opacity-black-2;
+    .login-btn {
+      margin-right: 2rem;
+    }
+  }
+}

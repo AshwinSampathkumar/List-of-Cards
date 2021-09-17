@@ -1,0 +1,47 @@
+@import "../global.scss";
+
+.btn {
+  @include align-all();
+  border-radius: 6px;
+  border: $unset;
+  color: $light;
+  cursor: $pointer;
+}
+
+//primary button
+.btn-primary {
+  @extend .primary;
+  &:hover {
+    @extend .secondary;
+  }
+}
+
+//secondary button
+.btn-secondary {
+  @extend .secondary;
+  &:hover {
+    @extend .primary;
+  }
+}
+// common button style
+button {
+  @extend .bold;
+  &:hover {
+    cursor: $pointer;
+  }
+}
+
+.primary {
+  background: $linear-gradient-1;
+  color: $light;
+  transition: 0.3s;
+  border-image-slice: 1 !important;
+}
+.secondary {
+  border-image: $linear-gradient-1 !important;
+  border: 2px $solid !important;
+  background: $light;
+  color: $red;
+  border-image-slice: 1 !important;
+  transition: 0.1s;
+}

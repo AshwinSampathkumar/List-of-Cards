@@ -1,5 +1,23 @@
 // white & white shade
 $light: #ffffff;
+$light-1: #f1f3f7;
+$light-2: #fdfdfd;
 
 // black & black shade
 $black: #4d606d;
+
+// red & red shade
+$red: #d82e76;
+$red-1: #ff032d;
+
+// opacity black
+$opacity-black-1: rgba(255, 255, 255, 0.1);
+$opacity-black-2: rgba(189, 189, 189, 0.16);
+
+// box shadows
+$box-shadow-1: rgba(189, 189, 189, 0.16);
+$box-shadow-2: rgba(0, 0, 0, 0.35) 0px 5px 0.9375rem;
+$box-shadow-3: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+// linear gradients
+$linear-gradient-1: linear-gradient(to right, $red 0%, $red-1 100%);
