@@ -1,0 +1,51 @@
+@import "../global.scss";
+
+.select-container {
+  position: $relative;
+  cursor: $pointer;
+  .select-btn {
+    @include align-all();
+    background-color: $light;
+    border-radius: 4px;
+    border: 1px solid $light-2;
+    cursor: $pointer;
+    .select-label {
+      @extend .fs-08;
+      color: $black;
+      cursor: $pointer;
+    }
+    img {
+      width: 0.625rem;
+      height: 0.625rem;
+      margin-left: 1rem;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .dd-menu {
+    @extend .full-width;
+    position: $absolute;
+    z-index: 999;
+    top: 2rem;
+    background-color: $light;
+    box-shadow: 0 2px 0.5rem $opacity-black-2;
+    .dd-item {
+      @include row-align();
+      @extend .fs-08;
+      padding-left: 1rem;
+      height: 2rem;
+      border-bottom: 1px $solid $opacity-black-2;
+      cursor: $pointer;
+      &:hover {
+        background-color: $red !important;
+        color: $light !important;
+        transition: 0.3s;
+      }
+    }
+  }
+}

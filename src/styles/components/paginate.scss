@@ -1,0 +1,10 @@
+@import "../global.scss";
+
+.paginate-container {
+  @include align-all();
+  height: 3rem;
+}
+
+.page-btn {
+  border-radius: 0 !important;
+}

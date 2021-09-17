@@ -7,3 +7,33 @@
 .full-width {
   width: 100%;
 }
+
+// Dashboard
+.dashboard-container{
+  padding: 2rem;
+  .dashboard-head{
+    @include col-align($space-between);
+    .list-title{
+      margin-top: $unset !important;
+    }
+    .right-content{
+      display: $flex;
+      flex-direction: $row;
+      .limit-dropdown{
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// List
+.fetch-text{
+  @extend .full-width;
+  text-align: $center;
+  margin: 4rem;
+}
+
+.card-list{
+  padding-left: $unset !important;
+  margin-top: 2rem;
+}
